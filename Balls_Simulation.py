@@ -2,9 +2,9 @@
 Balls collision simulation
 
 @authors: 
-    Juan Jose Potes Gomez (1202205)
-    Julie Alejandra Ibarra (1202261)
-    Cristian Camilo Jimenez (1202255)
+    Juan Jose Potes Gomez
+    Julie Alejandra Ibarra
+    Cristian Camilo Jimenez
 """
 
 import pygame
