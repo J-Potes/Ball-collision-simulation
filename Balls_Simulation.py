@@ -510,6 +510,7 @@ while len(particulas) < n_particulas:
 def main():
     global t
     running = True
+    paused = False
     pygame.init()
     display=(900,600)
     pygame.display.set_mode(display, DOUBLEBUF|OPENGL)
@@ -522,9 +523,14 @@ def main():
                 pygame.quit()
                 running=False
                 break
-            
+            if event.type == pygame.KEYDOWN:
+                if event.key == K_SPACE:
+                    if paused == True:
+                        paused = False
+                    elif paused == False:
+                        paused = True
         # Se ejecuta mientras que el tiempo total sea menor al tiempo maximo definido
-        if( running == True and t <= t_max):
+        if( running == True and t <= t_max and paused == False):
             # Se limpia la pantalla de OpenGL
             glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
             
@@ -560,9 +566,9 @@ def main():
             pygame.time.wait(1)
             print("Tiempo procesado: ",round(t,3)," s")
             t+=ht
-        else:
-            running = False
-            break
+        # else:
+        #     running = False
+        #     break
     print("Tiempo total simulado = ",round(t,1))
     pygame.quit()
 
