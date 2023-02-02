@@ -74,7 +74,7 @@ def conv_ang(angulo, tipo):
 # Funcion para pintar circulo en OpenGL
 def circle(nsides, xc, yc, radio, r, g, b):
     n = 0
-    glBegin(GL_LINE_STRIP)
+    glBegin(GL_POLYGON)
     glColor3f(r, g, b)
     while(n <= nsides):
         angle = 2 * np.pi * n / nsides
