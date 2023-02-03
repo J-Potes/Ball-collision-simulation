@@ -7,3 +7,7 @@ In the bottom left part of the container there is a section that increase the sp
 It needs pygame and OpenGL.
 
 In the current version, most of the code is written in Spanish.
+
+
+https://user-images.githubusercontent.com/119544731/216538457-3d24b0ca-174d-4b3e-a701-164e91eac102.mp4
+
